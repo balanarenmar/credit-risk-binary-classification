@@ -18,16 +18,16 @@ library(corrplot)
 set.seed(0)
 options("scipen"=100, "digits"=5)
 
-#Load the csv file "data.unbalanced"
-data.unbalanced <- read.csv("new_card_data.csv")
+#Load the csv file containing the original dataset
+data.unbalanced <- read.csv("unbalanced-CREDIT_DATA.csv")
 data.unbalanced$loan_status <- factor(data.unbalanced$loan_status)
 data.unbalanced$initial_list_status <- factor(data.unbalanced$initial_list_status)
 
 #library(RSBID)
 #data.balanced <- SMOTE_NC(data.unbalanced, 'loan_status')
 
-#datasmotenc contains the balanced data set after performing SMOTE-NC method.
-data.balanced <- read.csv("datasmotenc.csv")
+#balanced-CREDIT_DATA contains the balanced data set after performing SMOTE-NC method.
+data.balanced <- read.csv("balanced-CREDIT_DATA.csv")
 
 #change to proper data type to perform data mining
 data.balanced$loan_status <- factor(data.balanced$loan_status)
