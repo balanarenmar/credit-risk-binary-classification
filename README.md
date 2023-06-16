@@ -15,25 +15,19 @@ The original dataset was retrieved from [Kaggle](https://www.kaggle.com/datasets
 
 + Handling Missing Data
     - Columns irrelevant to the classifier such as `member_id`,  `zip_code`, `addr_state` etc. were dropped.
-    - Columns where the majority of data have missing values *(greater than 50%)* were also removed. These were the columns named `batch_enrolled`, `emp_title`, `mnths_since_last record`, `mnths_since_last_major_derog`, etc.
-
+    - Columns where the majority of data have missing values *(greater than 50%)* were also removed. These were the columns named `batch_enrolled`, `emp_title`, `mnths_since_last record`, `mnths_since_last_major_derog`, etc.<br><br>
 + Data Type
     - After removing the problematic features, we are left with a data frame with only 31 variables.
     -  We then transformed the data types of the columns to be more appropriate for model learning. Ordinal values such as `loan_status` *(the class variable)*, `grade`, `verification_status`, and others are turned into factors instead of characters.
-    - The remaining missing values were handled by dropping the rows containing such instances.
-
+    - The remaining missing values were handled by dropping the rows containing such instances.<br><br>
 + Balancing the Class Variable
-    - The original distribution of the class variable is unbalanced, wherein 80% have the value **0** and 20% are **1**.
-
-    - <img src="assets/fig1.png" alt="" width="60%">
-    - In order to remove the bias towards the negative value in training the model, the researchers tried using the Synthetic Minority Oversampling Technique (SMOTE) and the undersampling technique in balancing the class variable.
-
-    - Asa <br>
-    <img src="assets/project3.1.png" alt="" width="70%">
-
-+ Data Augmentation
-    - asa
-
+    - The original distribution of the class variable is unbalanced, wherein 80% have the value **0** and 20% are **1**. <br>
+    <img src="assets/fig1.png" alt="" width="50%">
+    - In order to remove the bias towards the negative value in training the model, the researchers tried using the Synthetic Minority Oversampling Technique (SMOTE) and the undersampling technique in balancing the class variable.<br><br>
++ Feature Preparation
+    - Feature selection is the method of reducing input variables by using only relevant data and getting rid of noise in data. The researchers obtained the Univariance Feature Importance Score of each variable in order to select the only relevant features. Two methods for finding feature importance was used: **Chi-square test** and **Gain ratio**.<br>
+    <img src="assets/fig2.png" alt="Chi-Square Test" width="48%"> <img src="assets/fig3.png" alt="Chi-Square Test" width="48%">
+    - 
 
 ## **Test-Train Partition**
 > 
