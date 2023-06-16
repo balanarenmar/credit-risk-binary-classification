@@ -9,7 +9,7 @@ Additionaly, we compared the difference between Hold-out and Cross-Validation me
 ---
 <br>
 
-## **Data Preparation**
+# **Data Preparation**
 
 The original dataset was retrieved from [Kaggle](https://www.kaggle.com/datasets/shadabhussain/credit-risk-loan-eliginility).
 
@@ -35,45 +35,20 @@ The original dataset was retrieved from [Kaggle](https://www.kaggle.com/datasets
     - Additionally, the researchers tried greedy search strategies to find the most important features. Both **forward-search** and **best-first search** identified last_week_pay as the most important feature. **Hill-climbing search** identified recoveries as the most important attribute, followed by last_week_pay, then initial_list_status.
     - The researchers decided to pick the top 5 features using the information gain ratio method of the balanced dataset. The top 5 features are `recoveries`, `collection_recovery_fee`, `last_week_pay`, `int_rate`, and `initial_list_status`.
 
+<br>
 
-## **MODELING & RESULTS**
+# **MODELING & RESULTS**
 The researchers used ten classification algorithms in performing binary
 classification of the dataset. 
 
-<table>
-<tr><th>Default Goal State </th></tr>
-<tr><td>
+## Classification and Regression Tree (CART)
+The CART algorithm is used to build a decision tree that predicts the loan
+eligibility status of an applicant based on the given attributes.
 
-|  |  |  |
-|:--:|:--:|:--:|
-| 1 | 2 | 3 |
-| 8 | `_` | 4 |
-| 7 | 6 | 5 |
+| Data Set | Split | Accuracy | Kappa |
+|:--:|:--:|:--:|:--:|
+| Balanced | Cross Validation | .862 | .725 |
+| Balanced | Hold-out | .844 | .688 |
+| Unbalanced | Cross Validation | .893 | .611 |
+| Unbalanced | Hold-out | .886 | .592 |
 
-</td><td>
-
-|  |  |  |
-|:--:|:--:|:--:|
-| 1 | 3 | 4 |
-| 8 | 6 | 2 |
-| 7 | `_` | 5 |
-
-</td><td>
-
-|  |  |  |
-|:--:|:--:|:--:|
-| 2 | 8 | 1 |
-| `_` | 4 | 3 |
-| 7 | 6 | 5 |
-
-</td><td>
-
-|  |  |  |
-|:--:|:--:|:--:|
-| 2 | 8 | 1 |
-| 4 | 6 | 3 |
-| 7 | 5 | `_` |
-
-</td></tr>
-
-</table>
