@@ -78,8 +78,8 @@ The KNN algorithm is used to predict loan eligibility by identifying the k neare
 | Data Set | Split | Accuracy | Kappa |
 |:--:|:--:|:--:|:--:|
 | Balanced | Cross Validation | .796 | .592 |
-| Balanced | Hold-out | .863 | .725 |
-| Unbalanced | Cross Validation | .920 | .717 |
+| Balanced | Hold-out | .791 | .583 |
+| Unbalanced | Cross Validation | .876 | .528 |
 | Unbalanced | Hold-out | .890 | .604 |
 
 
@@ -92,8 +92,8 @@ The KNN algorithm is used to predict loan eligibility by identifying the k neare
 | Data Set | Split | Accuracy | Kappa |
 |:--:|:--:|:--:|:--:|
 | Balanced | Cross Validation | .597 | .194 |
-| Balanced | Hold-out | .863 | .725 |
-| Unbalanced | Cross Validation | .920 | .717 |
+| Balanced | Hold-out | .597 | .193 |
+| Unbalanced | Cross Validation | .804 | .0 |
 | Unbalanced | Hold-out | .890 | .604 |
 
 **neighbors (k) held at constant value 1 .*
@@ -107,8 +107,8 @@ The KNN algorithm is used to predict loan eligibility by identifying the k neare
 | Data Set | Split | Accuracy | Kappa |
 |:--:|:--:|:--:|:--:|
 | Balanced | Cross Validation | .899 | .797 |
-| Balanced | Hold-out | .863 | .725 |
-| Unbalanced | Cross Validation | .920 | .717 |
+| Balanced | Hold-out | .871 | .743 |
+| Unbalanced | Cross Validation | .921 | .721 |
 | Unbalanced | Hold-out | .890 | .604 |
 
 **hyperparameter mtry held at constant value 5 .*
@@ -123,8 +123,8 @@ decision trees to make more accurate and robust predictions. A collection of dec
 | Data Set | Split | Accuracy | Kappa |
 |:--:|:--:|:--:|:--:|
 | Balanced | Cross Validation | .50 | 0 |
-| Balanced | Hold-out | .863 | .725 |
-| Unbalanced | Cross Validation | .920 | .717 |
+| Balanced | Hold-out | .50 | 0 |
+| Unbalanced | Cross Validation | .197 | 0 |
 | Unbalanced | Hold-out | .890 | .604 |
 
 Naive Bayes, was implemented through caret's method 'nb'. It is a simple
@@ -137,8 +137,8 @@ probabilistic classifier based on Bayes' theorem with the assumption of independ
 | Data Set | Split | Accuracy | Kappa |
 |:--:|:--:|:--:|:--:|
 | Balanced | Cross Validation | .609 | .218 |
-| Balanced | Hold-out | .863 | .725 |
-| Unbalanced | Cross Validation | .920 | .717 |
+| Balanced | Hold-out | .604 | .208 |
+| Unbalanced | Cross Validation | .808 | 0 |
 | Unbalanced | Hold-out | .890 | .604 |
 
 
@@ -151,8 +151,8 @@ A neural network is an artificial intelligence technique that enables computers 
 | Data Set | Split | Accuracy | Kappa |
 |:--:|:--:|:--:|:--:|
 | Balanced | Cross Validation | .714 | .429 |
-| Balanced | Hold-out | .863 | .725 |
-| Unbalanced | Cross Validation | .920 | .717 |
+| Balanced | Hold-out | .713 | .426 |
+| Unbalanced | Cross Validation | .843 | .322 |
 | Unbalanced | Hold-out | .890 | .604 |
 
 **mincriterion held at constant value 0.01 .*
@@ -166,8 +166,8 @@ Conditional inference trees offer flexibility in handling both categorical and c
 | Data Set | Split | Accuracy | Kappa |
 |:--:|:--:|:--:|:--:|
 | Balanced | Cross Validation | .866 | .731 |
-| Balanced | Hold-out | .863 | .725 |
-| Unbalanced | Cross Validation | .920 | .717 |
+| Balanced | Hold-out | .847 | .694 |
+| Unbalanced | Cross Validation | .872 | .496 |
 | Unbalanced | Hold-out | .890 | .604 |
 
 **C held at constant value 0.5; M held at constant value 1.*
@@ -183,8 +183,8 @@ method set to 'J48'. This constructs decision trees based on the C4.5 algorithm,
 | Data Set | Split | Accuracy | Kappa |
 |:--:|:--:|:--:|:--:|
 | Balanced | Cross Validation | .626 | .252 |
-| Balanced | Hold-out | .863 | .725 |
-| Unbalanced | Cross Validation | .920 | .717 |
+| Balanced | Hold-out | .628 | .256 |
+| Unbalanced | Cross Validation | .813 | .083 |
 | Unbalanced | Hold-out | .890 | .604 |
 
 When using the XGBoost model for classification, it follows a boosting
