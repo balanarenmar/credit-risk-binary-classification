@@ -1,5 +1,7 @@
 # **Credit Risk Binary Classification**
 
+<img src="assets/project3.png" alt="Chi-Square Test" width="90%"><br> 
+
 A Case study analyzing the performance of different classification algorithms against loan risk data.
 
 We created a predictive classification model using R to predict if a customer is likely to default their loan or not, helping make informed decisions about which loan applications to approve. The target variable `loan_status` is a binary class where **0** stands for eligible and **1** being not eligible for a loan.
