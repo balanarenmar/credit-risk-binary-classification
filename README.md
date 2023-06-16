@@ -80,7 +80,7 @@ The KNN algorithm is used to predict loan eligibility by identifying the k neare
 | Balanced | Cross Validation | .796 | .592 |
 | Balanced | Hold-out | .791 | .583 |
 | Unbalanced | Cross Validation | .876 | .528 |
-| Unbalanced | Hold-out | .890 | .604 |
+| Unbalanced | Hold-out | .770 | .540 |
 
 
 The KNN algorithm is used to predict loan eligibility by identifying the k nearestvneighbors of a new loan applicant based on their attributes. The algorithm wouldbcalculate the distance between the new applicant and each existing applicant in the dataset and select the k nearest neighbors.
@@ -94,7 +94,7 @@ The KNN algorithm is used to predict loan eligibility by identifying the k neare
 | Balanced | Cross Validation | .597 | .194 |
 | Balanced | Hold-out | .597 | .193 |
 | Unbalanced | Cross Validation | .804 | .0 |
-| Unbalanced | Hold-out | .890 | .604 |
+| Unbalanced | Hold-out | .804 | .0 |
 
 **neighbors (k) held at constant value 1 .*
 
@@ -109,7 +109,7 @@ The KNN algorithm is used to predict loan eligibility by identifying the k neare
 | Balanced | Cross Validation | .899 | .797 |
 | Balanced | Hold-out | .871 | .743 |
 | Unbalanced | Cross Validation | .921 | .721 |
-| Unbalanced | Hold-out | .890 | .604 |
+| Unbalanced | Hold-out | .893 | .616 |
 
 **hyperparameter mtry held at constant value 5 .*
 
@@ -125,7 +125,7 @@ decision trees to make more accurate and robust predictions. A collection of dec
 | Balanced | Cross Validation | .50 | 0 |
 | Balanced | Hold-out | .50 | 0 |
 | Unbalanced | Cross Validation | .197 | 0 |
-| Unbalanced | Hold-out | .890 | .604 |
+| Unbalanced | Hold-out | .197 | 0 |
 
 Naive Bayes, was implemented through caret's method 'nb'. It is a simple
 probabilistic classifier based on Bayes' theorem with the assumption of independence between features.
@@ -138,8 +138,8 @@ probabilistic classifier based on Bayes' theorem with the assumption of independ
 |:--:|:--:|:--:|:--:|
 | Balanced | Cross Validation | .609 | .218 |
 | Balanced | Hold-out | .604 | .208 |
-| Unbalanced | Cross Validation | .808 | 0 |
-| Unbalanced | Hold-out | .890 | .604 |
+| Unbalanced | Cross Validation | .808 | .070 |
+| Unbalanced | Hold-out | .809 | .069 |
 
 
 A neural network is an artificial intelligence technique that enables computers to process data in a manner resembling the human brain. The package commonly used for artificial neural networks in R is called "nnet." It provides functions and tools for building, training, and evaluating neural network models. A grid of hyperparameter values, determined by the expand.grid function, is used to fine-tune the neural network model.
@@ -153,7 +153,7 @@ A neural network is an artificial intelligence technique that enables computers 
 | Balanced | Cross Validation | .714 | .429 |
 | Balanced | Hold-out | .713 | .426 |
 | Unbalanced | Cross Validation | .843 | .322 |
-| Unbalanced | Hold-out | .890 | .604 |
+| Unbalanced | Hold-out | .840 | .313 |
 
 **mincriterion held at constant value 0.01 .*
 
@@ -168,7 +168,7 @@ Conditional inference trees offer flexibility in handling both categorical and c
 | Balanced | Cross Validation | .866 | .731 |
 | Balanced | Hold-out | .847 | .694 |
 | Unbalanced | Cross Validation | .872 | .496 |
-| Unbalanced | Hold-out | .890 | .604 |
+| Unbalanced | Hold-out | .868 | .466 |
 
 **C held at constant value 0.5; M held at constant value 1.*
 
@@ -185,7 +185,7 @@ method set to 'J48'. This constructs decision trees based on the C4.5 algorithm,
 | Balanced | Cross Validation | .626 | .252 |
 | Balanced | Hold-out | .628 | .256 |
 | Unbalanced | Cross Validation | .813 | .083 |
-| Unbalanced | Hold-out | .890 | .604 |
+| Unbalanced | Hold-out | .815 | .098 |
 
 When using the XGBoost model for classification, it follows a boosting
 framework where an ensemble of decision trees is constructed iteratively. Each decision tree is built to correct the mistakes made by the previous trees. 
