@@ -42,8 +42,6 @@ The researchers used ten classification algorithms in performing binary
 classification of the dataset. 
 
 ## Classification and Regression Tree (CART)
-The CART algorithm is used to build a decision tree that predicts the loan
-eligibility status of an applicant based on the given attributes.
 
 | Data Set | Split | Accuracy | Kappa |
 |:--:|:--:|:--:|:--:|
@@ -51,4 +49,26 @@ eligibility status of an applicant based on the given attributes.
 | Balanced | Hold-out | .844 | .688 |
 | Unbalanced | Cross Validation | .893 | .611 |
 | Unbalanced | Hold-out | .886 | .592 |
+
+**complexity parameter (cp) held at constant value 0.*
+
+The CART algorithm is used to build a decision tree that predicts the loan
+eligibility status of an applicant based on the given attributes.
+
+<br>
+
+## K Nearest Neighbors (kNN)
+
+| Data Set | Split | Accuracy | Kappa |
+|:--:|:--:|:--:|:--:|
+| Balanced | Cross Validation | .897 | .794 |
+| Balanced | Hold-out | .863 | .725 |
+| Unbalanced | Cross Validation | .920 | .717 |
+| Unbalanced | Hold-out | .890 | .604 |
+
+**neighbors (k) held at constant value 1.*
+
+The KNN algorithm is used to predict loan eligibility by identifying the k nearestvneighbors of a new loan applicant based on their attributes. The algorithm wouldbcalculate the distance between the new applicant and each existing applicant in the dataset and select the k nearest neighbors.
+
+<br>
 
