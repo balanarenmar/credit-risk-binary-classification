@@ -22,12 +22,20 @@ The original dataset was retrieved from [Kaggle](https://www.kaggle.com/datasets
     - The remaining missing values were handled by dropping the rows containing such instances.<br><br>
 + Balancing the Class Variable
     - The original distribution of the class variable is unbalanced, wherein 80% have the value **0** and 20% are **1**. <br>
-    <img src="assets/fig1.png" alt="" width="50%">
+    <img src="assets/Fig1.png" alt="" width="50%">
     - In order to remove the bias towards the negative value in training the model, the researchers tried using the Synthetic Minority Oversampling Technique (SMOTE) and the undersampling technique in balancing the class variable.<br><br>
 + Feature Preparation
-    - Feature selection is the method of reducing input variables by using only relevant data and getting rid of noise in data. The researchers obtained the Univariance Feature Importance Score of each variable in order to select the only relevant features. Two methods for finding feature importance was used: **Chi-square test** and **Gain ratio**.<br>
-    <img src="assets/fig2.png" alt="Chi-Square Test" width="48%"> <img src="assets/fig3.png" alt="Chi-Square Test" width="48%">
-    - 
+    - Feature selection is the method of reducing input variables by using only relevant data and getting rid of noise in data. The researchers obtained the Univariance Feature Importance Score of each variable in order to select the only relevant features. Different methods for finding feature importance was used: **Chi-square test** and **Information Gain ratio**, **Correlation/Entropy with Best First Search**, and **Black-box feature selection**<br>
+    <img src="assets/Fig2.png" alt="Chi-Square Test" width="50%"> 
+    - In the chi-square test statistic, we first discretized the numeric and int variables to convert them as factors with 5 levels. After this, the algorithm outputs the top five variables, which are last_week_pay, initial_list_status, term, verification_status, and dti.<br>
+    <img src="assets/Fig3.png" alt="Chi-Square Test" width="50%">
+    - Computing the univariate feature importance score using the **information gain ratio**, the algorithm outputs the top five variables with the highest gain which are recoveries, collection_recovery_fee, last_week_pay, int_rate, and initial_list_status. 
+    - The **cfs method** stated that the variables int_rate, initial_list_status, recoveries, and last_week_pay, respectively, are the most important features.
+    - In the **black-box feature selection**, the five most important features are loan_amnt, term, int_rate, emp_length, and home_ownership as least important.
+    - Additionally, the researchers tried greedy search strategies to find the most important features. Both **forward-search** and **best-first search** identified last_week_pay as the most important feature. **Hill-climbing search** identified recoveries as the most important attribute, followed by last_week_pay, then initial_list_status.
+    - The researchers decided to pick the top 5 features using the information gain ratio method of the balanced dataset. The top 5 features are `recoveries`, `collection_recovery_fee`, `last_week_pay`, `int_rate`, and `initial_list_status`.
 
-## **Test-Train Partition**
+
+## **MODELING**
+
 > 
