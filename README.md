@@ -72,3 +72,128 @@ The KNN algorithm is used to predict loan eligibility by identifying the k neare
 
 <br>
 
+
+## Rule based classification
+
+| Data Set | Split | Accuracy | Kappa |
+|:--:|:--:|:--:|:--:|
+| Balanced | Cross Validation | .897 | .794 |
+| Balanced | Hold-out | .863 | .725 |
+| Unbalanced | Cross Validation | .920 | .717 |
+| Unbalanced | Hold-out | .890 | .604 |
+
+**neighbors (k) held at constant value 1.*
+
+The KNN algorithm is used to predict loan eligibility by identifying the k nearestvneighbors of a new loan applicant based on their attributes. The algorithm wouldbcalculate the distance between the new applicant and each existing applicant in the dataset and select the k nearest neighbors.
+
+<br>
+
+## Linear Support Vector Machine (SVM)
+
+| Data Set | Split | Accuracy | Kappa |
+|:--:|:--:|:--:|:--:|
+| Balanced | Cross Validation | .897 | .794 |
+| Balanced | Hold-out | .863 | .725 |
+| Unbalanced | Cross Validation | .920 | .717 |
+| Unbalanced | Hold-out | .890 | .604 |
+
+**neighbors (k) held at constant value 1.*
+
+The KNN algorithm is used to predict loan eligibility by identifying the k nearestvneighbors of a new loan applicant based on their attributes. The algorithm wouldbcalculate the distance between the new applicant and each existing applicant in the dataset and select the k nearest neighbors.
+
+<br>
+
+## Random Forest
+
+| Data Set | Split | Accuracy | Kappa |
+|:--:|:--:|:--:|:--:|
+| Balanced | Cross Validation | .897 | .794 |
+| Balanced | Hold-out | .863 | .725 |
+| Unbalanced | Cross Validation | .920 | .717 |
+| Unbalanced | Hold-out | .890 | .604 |
+
+**neighbors (k) held at constant value 1.*
+
+Random Forest `method=rf` works by combining the predictions of multiple
+decision trees to make more accurate and robust predictions. A collection of decision trees is constructed using a technique called "bagging." Bagging involves randomly selecting subsets of the training data, with replacement, to create multiple subsets of the data. Each subset is then used to train an individual decision tree. 
+
+<br>
+
+## Naive Bayes Classifier
+
+| Data Set | Split | Accuracy | Kappa |
+|:--:|:--:|:--:|:--:|
+| Balanced | Cross Validation | .897 | .794 |
+| Balanced | Hold-out | .863 | .725 |
+| Unbalanced | Cross Validation | .920 | .717 |
+| Unbalanced | Hold-out | .890 | .604 |
+
+**neighbors (k) held at constant value 1.*
+
+Naive Bayes, was implemented through caret's method 'nb'. It is a simple
+probabilistic classifier based on Bayes' theorem with the assumption of independence between features.
+
+<br>
+
+## Artificial Neural Network
+
+| Data Set | Split | Accuracy | Kappa |
+|:--:|:--:|:--:|:--:|
+| Balanced | Cross Validation | .897 | .794 |
+| Balanced | Hold-out | .863 | .725 |
+| Unbalanced | Cross Validation | .920 | .717 |
+| Unbalanced | Hold-out | .890 | .604 |
+
+**neighbors (k) held at constant value 1.*
+
+A neural network is an artificial intelligence technique that enables computers to process data in a manner resembling the human brain. The package commonly used for artificial neural networks in R is called "nnet." It provides functions and tools for building, training, and evaluating neural network models. A grid of hyperparameter values, determined by the expand.grid function, is used to fine-tune the neural network model.
+
+<br>
+
+## Conditional Inference Tree
+
+| Data Set | Split | Accuracy | Kappa |
+|:--:|:--:|:--:|:--:|
+| Balanced | Cross Validation | .897 | .794 |
+| Balanced | Hold-out | .863 | .725 |
+| Unbalanced | Cross Validation | .920 | .717 |
+| Unbalanced | Hold-out | .890 | .604 |
+
+**neighbors (k) held at constant value 1.*
+
+Conditional inference trees offer flexibility in handling both categorical and continuous predictor variables, as well as handling missing values. It starts by setting a seed value for reproducibility and creates fold indices using the createFolds.
+
+<br>
+
+## C4.5
+
+| Data Set | Split | Accuracy | Kappa |
+|:--:|:--:|:--:|:--:|
+| Balanced | Cross Validation | .897 | .794 |
+| Balanced | Hold-out | .863 | .725 |
+| Unbalanced | Cross Validation | .920 | .717 |
+| Unbalanced | Hold-out | .890 | .604 |
+
+**neighbors (k) held at constant value 1.*
+
+The J48 algorithm in R from the package caret and RWeka is used with the
+method set to 'J48'. This constructs decision trees based on the C4.5 algorithm, which uses attribute selection, recursive splitting, handling of missing values, and pruning to create an interpretable model for classification tasks.
+
+
+<br>
+
+## Gradient Boosted Decision Tree
+
+| Data Set | Split | Accuracy | Kappa |
+|:--:|:--:|:--:|:--:|
+| Balanced | Cross Validation | .897 | .794 |
+| Balanced | Hold-out | .863 | .725 |
+| Unbalanced | Cross Validation | .920 | .717 |
+| Unbalanced | Hold-out | .890 | .604 |
+
+**neighbors (k) held at constant value 1.*
+
+When using the XGBoost model for classification, it follows a boosting
+framework where an ensemble of decision trees is constructed iteratively. Each decision tree is built to correct the mistakes made by the previous trees. 
+
+<br>
